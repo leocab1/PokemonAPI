@@ -5,7 +5,7 @@ export const PokemonMessage = () => {
     return (
         <View>
             <Text>Cargando....</Text>
-            <ActivityIndicator size={20} color="#0000ff" />
+            <ActivityIndicator size={150} color="#0000ff" />
         </View>
     )
 }

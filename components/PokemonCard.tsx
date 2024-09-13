@@ -13,24 +13,28 @@ export function PokemonCard({ id, name, sprites }:pokeProp) {
     <View style={{
         flexDirection: "row",
         backgroundColor: "gray",
-        flex: 1
+        flex: 5,
     }}>
 
 
     <View
     style={{ 
         flex: 3,
-        backgroundColor: "red"
+        backgroundColor: "red",
+        justifyContent: "center",
+        alignItems: "center",
         }}
     
     >
     <Text style={{
-        fontSize: 50,
+        fontSize: 55,
         fontWeight: "bold",
         transform: [
-            {rotate:'-90deg'
+            {rotate:'-90deg',
 
             }],
+            textAlign: "center",
+            flexShrink: 1,
         
     }}>#{ id }- { name }</Text>
     </View>
@@ -43,7 +47,7 @@ export function PokemonCard({ id, name, sprites }:pokeProp) {
             sprites.map( (sprite: string, index:any ) => {
                 return (
                     <Avatar.Image 
-                        size={100} 
+                        size={135} 
                         source={{ uri:sprite }} 
                     />
                 )

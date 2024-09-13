@@ -15,7 +15,6 @@ export const PokemonInfo = () => {
     
 
     return (
-
         <ImageBackground
             style={{ 
                 flex:1, 
@@ -25,6 +24,7 @@ export const PokemonInfo = () => {
            source={{
             uri: 'https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/go/pokemon-party.jpg'
            }}
+            resizeMode="cover"
         >
 
 
@@ -43,16 +43,36 @@ export const PokemonInfo = () => {
         />
           }
 
-            <View style={{ flexDirection: "row-reverse" }}>
+            <View
+             style={{ 
+              width: "100%",
+              marginVertical: 15,
+              justifyContent: "space-evenly",
+              flexDirection: "row-reverse"
+            }}
+            >
+
                 <Button 
                     mode="contained"
-                    onPress={ () => increment() }
+                    onPress={ () => increment(1) }
+                    icon="arrow-right"
+                    style= {{
+                      backgroundColor: "darkblue"
+                    }}
+                    contentStyle= {{
+                      flexDirection: "row-reverse"
+                    }}
                 >
                     Siguiente
                 </Button>
                 <Button 
                     mode="contained"
-                    onPress={ () => decrement() }
+                    onPress={ () => decrement(1) }
+                    icon="arrow-left"
+                    style= {{
+                      backgroundColor: "darkblue"
+                    }}
+
                 >
                     Anterior
                 </Button>
