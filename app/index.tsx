@@ -5,7 +5,6 @@ import { PokemonInfo } from '@/components/PokemonInfo'
 const Index = () => {
   return (
     <View>
-      <Text>index</Text>
       <PokemonInfo/>
     </View>
   )
